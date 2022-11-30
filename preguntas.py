@@ -27,6 +27,9 @@ def pregunta_01():
 
     # Imprima las dimensiones del vector de salida
     print(digits.target.shape)
+    plt.gray()
+    plt.matshow(digits.images[2])
+    plt.show()
 
 def pregunta_02():
     """
