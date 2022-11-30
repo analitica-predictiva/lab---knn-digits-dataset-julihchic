@@ -17,7 +17,7 @@ def pregunta_01():
     """
 
     # Cargue el dataset digits
-    digits = datasets.load_digits(return_X_y=False)
+    digits = datasets.load_digits()
 
     # Imprima los nombres de la variable target del dataset
     print(digits.target_names)
@@ -40,11 +40,11 @@ def pregunta_02():
     from sklearn.model_selection import train_test_split
 
     # Cargue el dataset digits
-    digits = datasets.load_digits(return_X_y=True)
+    digits = datasets.load_digits()
 
     # Cree los vectors de características y de salida
-    X = digits[0]
-    y = digits[1]
+    X = digits.data
+    y = digits.target
 
     # Divida los datos de entrenamiento y prueba. Los conjuntos de datos están
     # estratificados. La semilla del generador de números aleatorios es 42.
@@ -75,11 +75,11 @@ def pregunta_03():
     from sklearn.model_selection import train_test_split
 
     # Cargue el dataset digits
-    digits = datasets.load_digits(return_X_y=True)
+    digits = datasets.load_digits()
 
     # Cree los vectors de características y de salida
-    X = digits[0]
-    y = digits[1]
+    X = digits.data
+    y = digits.target
 
     # Divida los datos de entrenamiento y prueba. Los conjuntos de datos están
     # estratificados. La semilla del generador de números aleatorios es 42.
